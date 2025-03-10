@@ -13,27 +13,19 @@
             height: 100vh;
             background-color: #f4f4f4;
         }
-        iframe {
-            width: 90%;
-            height: 90vh;
-            border: none;
-        }
     </style>
 </head>
 <body>
-    <iframe id="retool-app" src="https://your-retool-subdomain.retool.com/apps/app-name" width="100%" height="800px"></iframe>
+    <div id="top-container" style="
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 100;
+    background: #f6f6f6;
+"></div>
+    <iframe id="retool-app" src="https://your-retool-subdomain.retool.com/apps/app-name" width="100%" height="100%"></iframe>
 
-<script>
-    document.getElementById("retool-app").onload = function () {
-        let iframe = document.getElementById("retool-app").contentWindow.document;
-
-        // Wait for the login form
-        setTimeout(() => {
-            iframe.querySelector("input[name='email']").value = "puneet.241994.agarwal@gmail.com";
-            iframe.querySelector("input[name='password']").value = "Josys@123";
-             // iframe.querySelector("button[type='submit']").click();
-        }, 2000);
-    };
-</script>
 </body>
 </html>
